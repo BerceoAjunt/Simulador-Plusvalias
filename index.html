@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador de Plusvalía Municipal - Ayuntamiento de la Bisbal del Penedès</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="escudo.png" alt="Escudo Ayuntamiento" class="escudo">
+            <h1>Simulador de Plusvalía Municipal</h1>
+            <p>Ayuntamiento de la Bisbal del Penedès</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form id="plusvalia-form">
+                <div class="form-group">
+                    <label for="valor-compra">Valor de compra (€):</label>
+                    <input type="number" id="valor-compra" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor-venta">Valor de venta (€):</label>
+                    <input type="number" id="valor-venta" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor-catastral-terreno">Valor catastral del terreno (€):</label>
+                    <input type="number" id="valor-catastral-terreno" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor-catastral-total">Valor catastral total de la propiedad (€):</label>
+                    <input type="number" id="valor-catastral-total" required>
+                </div>
+                <div class="form-group">
+                    <label for="anos-posesion">Años en posesión:</label>
+                    <input type="number" id="anos-posesion" required>
+                </div>
+                <div class="form-group">
+                    <label for="num-propietarios">Número de propietarios:</label>
+                    <input type="number" id="num-propietarios" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-transaccion">Tipo de transacción:</label>
+                    <select id="tipo-transaccion">
+                        <option value="compraventa">Compraventa</option>
+                        <option value="herencia">Herencia (padres e hijos)</option>
+                    </select>
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+
+        <div id="resultados" class="resultados-container">
+            <h2>Resultados</h2>
+            <p><strong>Importe más bajo para la liquidación del impuesto:</strong></p>
+            <p id="resultado"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ayuntamiento de la Bisbal del Penedès</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
